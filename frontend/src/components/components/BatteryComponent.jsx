@@ -3,7 +3,7 @@ import "../../resources/styles/battery-style.css";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
 import global from "../../resources/global.json";
-//hello
+
 export default function BatteryComponent() {
 	const [userId, setUserId] = useState("");
 	const [batteryPercentage, setBatteryPercentage] = useState(100);
