@@ -37,7 +37,7 @@ public class RoutesController {
     @Transactional
     public ResponseEntity<?> viewTransactions() {
         List<Routes> routes = routesService.getAll();
-        return  ResponseEntity.ok("routes");
+        return  ResponseEntity.ok(routes);
     }
 
     @PostMapping("/update")
