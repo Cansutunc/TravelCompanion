@@ -9,10 +9,10 @@ RUN mvn package -DskipTests
 # Stage 2: Create the final container image
 FROM openjdk:17
 WORKDIR /app
-COPY --from=build /app/target/EnergyXChange-0.0.1-SNAPSHOT.jar ./EnergyXChange.jar
+COPY --from=build /app/target/TravelCompanion-0.0.1-SNAPSHOT.jar ./TravelCompanion.jar
 
 # Expose the port on which your Spring application listens
 EXPOSE 8080
 
 # Run the Spring application when the container starts
-ENTRYPOINT ["java", "-jar", "EnergyXChange.jar"]
+ENTRYPOINT ["java", "-jar", "TravelCompanion.jar"]
