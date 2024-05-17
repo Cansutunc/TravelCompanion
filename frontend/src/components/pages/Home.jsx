@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React from "react";
 import SideBar from "../components/SideBar";
 import { Grid } from "@mui/material";
 import BatteryComponent from "../components/BatteryComponent";

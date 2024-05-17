@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SideBar from "../components/SideBar";
 import TextField from "@mui/material/TextField";
-import Input from "@mui/material/Input";
-import Button from "@mui/material/Button";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import global from "../../resources/global.json";

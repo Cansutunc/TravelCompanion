@@ -8,6 +8,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+
 export default function WeatherComponent() {
 	const [hobbies, setHobbies] = useState([]);
 	const [datas, setDatas] = useState([]);

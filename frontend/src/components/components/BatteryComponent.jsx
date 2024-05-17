@@ -1,8 +1,6 @@
+import React  from 'react';
 import { useState, useEffect } from "react";
 import "../../resources/styles/battery-style.css";
-import jwt_decode from "jwt-decode";
-import axios from "axios";
-import global from "../../resources/global.json";
 
 export default function BatteryComponent() {
 	const [userId, setUserId] = useState("");
