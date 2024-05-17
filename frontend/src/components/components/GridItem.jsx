@@ -1,4 +1,4 @@
-import global from "../../resources/global.json";
+import React  from 'react';
 
 export default function GridItem({ children, backgroundColor, ...props }) {
 	return (
