@@ -65,11 +65,7 @@ export default function BatteryComponent() {
 				position: "relative",
 			}}
 		>
-			<h1
-				style={{ position: "absolute", top: -10, left: "20px", color: "white" }}
-			>
-				Battery Percentage
-			</h1>
+		
 			<div className="dashboard">
 				<svg className="battery_svg">
 					<circle className="bg" cx="57" cy="57" r="52" />

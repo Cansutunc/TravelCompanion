@@ -1,5 +1,6 @@
 import React from "react";
 import SideBar from "../components/SideBar";
+import Header from "../components/Header";
 import { Grid } from "@mui/material";
 import BatteryComponent from "../components/BatteryComponent";
 import global from "../../resources/global.json";
@@ -11,7 +12,7 @@ import MyLocation from "../components/LocationComponent";
 export default function Home() {
 	return (
 		<div style={{ display: "flex" }}>
-			<SideBar />
+			<Header />
 			<div
 				style={{
 					width: "100%",
@@ -27,14 +28,11 @@ export default function Home() {
 						style={{
 							height: "100vh",
 							display: "grid",
-							margin: "10px 0",
+							margin: "100px 0"
 						}}
 					>
 						<GridItem maxHeight="55vh" height="55vh">
 							<RoutesComponent bgColor={"cornflowerblue"} self={"dashboard"} />
-						</GridItem>
-						<GridItem minHeight="40vh" height="40vh">
-							<BatteryComponent />
 						</GridItem>
 					</Grid>
 
@@ -45,7 +43,7 @@ export default function Home() {
 							style={{
 								height: "40%",
 								display: "grid",
-								placeItems: "center",
+								margin: "100px 0"
 							}}
 						>
 							<GridItem backgroundColor={global.COLORS.ACCENT} height="38vh">
