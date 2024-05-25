@@ -1,6 +1,7 @@
 // Define the package of the class
 package com.travelcompanion.TravelCompanion.config;
-
+import com.travelcompanion.TravelCompanion.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,7 +14,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.travelcompanion.TravelCompanion.repository.UserRepository;
+
 
 
 import lombok.RequiredArgsConstructor;
@@ -25,7 +26,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
-    private final UserRepository userRepository;
+//    @Autowired
+    private final UserService userService ;
 
     // Define a UserDetailsService bean that retrieves UserDetails from SellerRepository
     @Bean
@@ -36,12 +38,12 @@ public class ApplicationConfig {
             public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
                 System.out.println("Finding user by his username: " + username);
                 
-                UserDetails userDetails = (UserDetails) userRepository.findByEmail(username);
-                
+                UserDetails userDetails = (UserDetails) userService.getUserByEmail(username);
+
                 if (userDetails != null) {
                     return userDetails;
                 }
-                
+
                 throw new UsernameNotFoundException("User not found");
             }
         };

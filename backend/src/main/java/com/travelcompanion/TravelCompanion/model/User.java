@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 
 // Map the entity to a table named "buyers"
-@Table(name = "users")
+@Table(name = "user")
 public class User implements UserDetails {
 
     // Define the primary key

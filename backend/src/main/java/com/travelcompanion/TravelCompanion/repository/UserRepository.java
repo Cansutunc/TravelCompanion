@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 // Enable JPA repositories and mark this interface as a repository
-@EnableJpaRepositories
+
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 

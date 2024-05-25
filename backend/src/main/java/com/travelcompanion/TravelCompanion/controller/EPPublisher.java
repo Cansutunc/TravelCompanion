@@ -8,14 +8,8 @@ import com.travelcompanion.TravelCompanion.RabbitMQ.QueueSender;
 
 @RestController
 @RequestMapping("/api/v1")
-public class EnergyPacketPublisher {
+public class EPPublisher {
     @Autowired
     private QueueSender queueSender;
 
-//    @PostMapping("/energyPacket")
-//    public String send(@RequestBody String message){
-//        // final var customMessage = new CustomMessage("Hello EnergyXChange!");
-//        queueSender.send(message);
-//        return "OK";
-//    }
 }
