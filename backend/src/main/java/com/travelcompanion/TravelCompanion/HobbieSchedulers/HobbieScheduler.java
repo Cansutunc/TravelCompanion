@@ -21,9 +21,10 @@ public class HobbieScheduler {
         this.queueSender = queueSender;
     }
 
-    @Scheduled(fixedDelay = 5000)
+    @Scheduled(fixedDelay = 10000)
     public void simulateEnergy(){
         List<User> users = userRepository.findAll();
+
         users.forEach(user -> {
             queueSender.send(user);
 

@@ -41,7 +41,6 @@ public class QueueConsumer {
     
     @RabbitListener(queues = {"${queue.name}"})
     public void receive(@Payload CustomMessage fileBody) {
-
         List<User> allUsers = userRepository.findAll();
 
         for (User user : allUsers) {
