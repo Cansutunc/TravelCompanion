@@ -2,6 +2,7 @@
 package com.travelcompanion.TravelCompanion.model;
 
 import java.util.Collection;
+import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -38,6 +39,16 @@ public class User implements UserDetails {
     // Define the "role" attribute as an enumerated type
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_trips",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "trip_id")
+    )
+    private List<Trip> trips;
+
+
 
     // Implement the UserDetails interface methods
     @Override

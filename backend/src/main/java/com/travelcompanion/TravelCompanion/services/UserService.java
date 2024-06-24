@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 // Declare this class as a service and force the initialization of the final variables
 @Service
@@ -29,6 +30,18 @@ public class UserService {
         return user;
     }
 
+    public User updateUserHobbies(String email, String hobbie1, String hobbie2, String hobbie3, String hobbie4) {
+        User user = userRepository.findByEmail(email);
+        if (user != null) {
+            user.setHobbie1(hobbie1);
+            user.setHobbie2(hobbie2);
+            user.setHobbie3(hobbie3);
+            user.setHobbie4(hobbie4);
+            return userRepository.save(user);
+        } else {
+            throw new RuntimeException("User not found.");
+        }
+    }
 
 
     public int Calculate(User user1,User user2){
